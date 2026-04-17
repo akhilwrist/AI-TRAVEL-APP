@@ -1,0 +1,55 @@
+{
+  "collections": {
+    "users": {
+      "{userId}": {
+        "home": {
+          "lat": "number",
+          "lng": "number",
+          "address": "string"
+        },
+        "preferences": {
+          "budgetInr": "number",
+          "transportMode": "string",
+          "packingStyle": "string"
+        },
+        "notificationTokens": ["string"],
+        "createdAt": "timestamp",
+        "updatedAt": "timestamp"
+      }
+    },
+    "trips": {
+      "{tripId}": {
+        "userId": "string",
+        "status": "PLANNING | BOOKED | TRANSIT | ARRIVAL | COMPLETED",
+        "origin": {
+          "lat": "number",
+          "lng": "number",
+          "address": "string"
+        },
+        "destination": {
+          "lat": "number",
+          "lng": "number",
+          "address": "string"
+        },
+        "schedule": {
+          "departureTime": "timestamp",
+          "arrivalTime": "timestamp",
+          "pnr": "string",
+          "seat": "string"
+        },
+        "logic_triggers": {
+          "packingSent": "boolean",
+          "trafficAlertSent": "boolean",
+          "arrivedSent": "boolean"
+        },
+        "liveStatus": {
+          "message": "string",
+          "lastUpdated": "timestamp",
+          "etaMinutes": "number"
+        },
+        "createdAt": "timestamp",
+        "updatedAt": "timestamp"
+      }
+    }
+  }
+}
